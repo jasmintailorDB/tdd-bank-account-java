@@ -1,9 +1,16 @@
 package org.xpdojo.bank;
 
 public class Account {
-    int bal = 0;
+
+    public static Account emptyAccount(){
+        return new Account();
+    }
+
+    private Account(){
+
+    }
 
     public int balance() {
-        return bal;
+        return 0;
     }
 }
