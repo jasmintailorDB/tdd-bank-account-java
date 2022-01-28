@@ -41,4 +41,12 @@ public class AccountTest {
         account.deposit(10);
         assertThat(account.transactions().size()).isEqualTo(1);
     }
+
+    @Test
+    public void withdrawAnAmount_shouldShowMultipleNumberOfTransactions(){
+        Account account = Account.emptyAccount();
+        account.deposit(20);
+        account.withdraw(10);
+        assertThat(account.transactions().size()).isEqualTo(2);
+    }
 }
