@@ -34,4 +34,11 @@ public class AccountTest {
         account.withdraw(10);
         assertThat(account.balance()).isEqualTo(10);
     }
+
+    @Test
+    public void depositAnAmount_shouldShowNumberOfTransactions(){
+        Account account=Account.emptyAccount();
+        account.deposit(10);
+        assertThat(account.transactions().size()).isEqualTo(1);
+    }
 }
