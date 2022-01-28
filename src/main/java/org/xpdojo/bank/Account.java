@@ -19,4 +19,8 @@ public class Account {
     public void deposit(int i) {
         bal = bal + i;
     }
+
+    public void withdraw(int i) {
+        bal = bal - i;
+    }
 }
